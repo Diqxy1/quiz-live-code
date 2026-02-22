@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: quiz-live-code
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123321
+      POSTGRES_DB: live-code
+    volumes:
+      - ./data:/data/postgres
+    ports:
+      - "45432:5432"
